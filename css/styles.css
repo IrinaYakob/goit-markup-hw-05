@@ -30,7 +30,8 @@
   
   
   body{
-  
+     
+    
       background-color: var(--background-color);
       color: var(--primary-text-color);
       font-family: Roboto, sans-serif;
@@ -43,10 +44,7 @@
   
   /*Page header  */
   .page-header {
-      position: fixed;
-      width:100% ;
-      top: 0;
-      left: 0;
+    
     background-color: var(--background-color);  
   }
   .page-header .container{
@@ -926,3 +924,4 @@ border-radius: 4px;
   /* identical to box height, or 187% */
   
   }
+  
