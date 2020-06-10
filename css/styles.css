@@ -901,6 +901,8 @@ border-radius: 4px;
   .product-thumb{
      
       position: relative;
+      overflow: hidden;
+    
   }
   .thumb-overly{
       display: block;
@@ -912,9 +914,14 @@ border-radius: 4px;
       height: 294px;
       width: 370px;
  background: rgba(33, 150, 243, 0.9);
- 
+ transform: translateY(100%);
+ transition-duration: 1000ms;
+ transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
+         
   }
-
+.card-link:hover .product-thumb{
+    transform: translateY(0);
+}
 
 
   .button-second{
