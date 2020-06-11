@@ -108,7 +108,7 @@
   padding-bottom: 32px;
   transition-property:  color;
       
-  transition-duration: 1000ms ;
+  transition-duration: 250ms ;
   transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
          
   }
@@ -129,7 +129,7 @@
     background-color: var(--accent-color);
     border-radius: 2px;
     transform: scaleX(0);
-    transition-duration: 1000ms ;
+    transition-duration: 250ms ;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
            
   
@@ -164,7 +164,7 @@
       color: var(--primary-text-color); 
       
       transition-property: color;
-      transition-duration: 1000ms ;
+      transition-duration: 250ms ;
       transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
                
      
@@ -476,6 +476,10 @@ border-radius: 4px;
     background-color: var(--background-color);
      color:#AFB1B8 ;
      border-radius: 50%;
+     transition-property: background-color,color;
+     transition-duration: 250ms;
+     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
+     
      
  }
   /* Icon-logo */
@@ -484,6 +488,7 @@ border-radius: 4px;
      height: 20;
      padding: 0;
      fill:currentColor;
+    
  }
  .list .team{
       display: flex;
@@ -538,13 +543,13 @@ border-radius: 4px;
 }
    .brand{
       display: flex;
-      background-color: var(--background-color);
-      border: 1px solid #AFB1B8;
-      border-radius: 4px;
+     
       width: 170px;
       height: 90px;
       padding: 0;
       margin-top: 50px;
+      
+     
   
      
   }
@@ -563,25 +568,28 @@ border-radius: 4px;
       display: flex;
      
       justify-content: center;
+      background-color: var(--background-color);
+      border: 1px solid #AFB1B8;
+      border-radius: 4px;
       width: 100%;
       height: 100%;
       text-align: center;
       align-items: center;
       color:#AFB1B8 ; 
+      transition-property:   background-color,color,  border;
+      transition-duration: 250ms;
+      transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
       
   }
   .brand-icon{
       fill:currentColor;
   }
-  .brand :hover,
-  .brand :focus{
-      background-color: var(--background-color);
-      color: var(--accent-color);
-      
-  }
+ 
     .brand-link:hover,
-    .brand-link :focus{
-    border:1px solid var(--accent-color);
+    .brand-link:focus{
+        background-color: var(--background-color);
+        color: var(--accent-color);    
+        border:1px solid var(--accent-color);
     
   }
   /* адресс */
@@ -644,6 +652,7 @@ border-radius: 4px;
 }
 .social-link{
     display: flex;
+    
     width: 100%;
     height:100%;
     justify-content: center;
@@ -823,6 +832,7 @@ border-radius: 4px;
       margin-left: auto;
       padding-top: 94px;
       padding-bottom: 0;
+      
   }
   .content-title{
       display: none;
@@ -871,6 +881,7 @@ border-radius: 4px;
       border: 1px solid #EEEEEE;
       border-radius: 5px;
       
+      
    }   
  .list-card .card:hover{
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
@@ -898,11 +909,17 @@ border-radius: 4px;
     line-height: 1,5;
     color: var(--background-color);
   }
+
+    
+
   .product-thumb{
-     
+      display: block;
       position: relative;
       overflow: hidden;
-    
+  }
+
+  .thumb-overly{
+      opacity: 0;
   }
   .thumb-overly{
       display: block;
@@ -913,19 +930,20 @@ border-radius: 4px;
       margin: 0;
       height: 294px;
       width: 370px;
- background: rgba(33, 150, 243, 0.9);
- transform: translateY(100%);
- transition-duration: 1000ms;
- transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
-         
+background: rgba(33, 150, 243, 0.9);
+transform: translateY(100%);
+transition-duration: 250ms ;
+transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
+      
   }
-.card-link:hover .product-thumb{
-    transform: translateY(0);
+.card-link:hover .thumb-overly{
+   transform: translateY(0) ;
+   opacity: 1;
 }
-
 
   .button-second{
       display: inline-block;
+    
       justify-content: center;
       min-width: 29px;
       height: 38px;
@@ -938,12 +956,16 @@ border-radius: 4px;
       font-weight: 500;
   font-size: 16px;
   line-height: 1,62;
+  transition-property: background-color, color, border ;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
+
   }
+
   
-  
-  
-  .content-list .button-second:hover,
-  .content-list .button-second:focus{
+  .button-second:hover,
+  .button-second:focus{
       color: var(--background-color);
       background-color: var(--accent-color);
   }
